@@ -8,8 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "ytdl-core": "^4.11.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
