@@ -16,7 +16,6 @@ function App() {
           <button onClick={() => {
           youtubeToDownload = document.getElementById('url') as HTMLInputElement
           console.log(youtubeToDownload.value)
-          ytdl(youtubeToDownload.value).pipe(fs.createWriteStream('video.mp4'))
         } } type="submit">Download</button>
         </form>
         
