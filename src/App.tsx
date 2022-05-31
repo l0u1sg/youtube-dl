@@ -9,12 +9,17 @@ function App() {
       <header className="App-header">
         <h1>YouTube Downloader</h1>
         <p>Paste your YouTube video URL here 👇</p>
-        <input type='url' id='url'required placeholder='https://youtube.com/AZERTY'></input>
-        <button onClick={() => {
+        <form>
+          <input type='url' pattern='https?://youtube.com/.+' id='url'required placeholder='https://youtube.com/AZERTY'/>
+          <br></br>
+          <br></br>
+          <button onClick={() => {
           youtubeToDownload = document.getElementById('url') as HTMLInputElement
           console.log(youtubeToDownload.value)
           ytdl(youtubeToDownload.value).pipe(fs.createWriteStream('video.mp4'))
-        } }>Download</button>
+        } } type="submit">Download</button>
+        </form>
+        
           
       </header>
     </div>
