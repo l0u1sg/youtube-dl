@@ -42,6 +42,6 @@ app.get("/", (req: Request, res: Response) => {
   res.render("index");
 });
 
-server.listen(3001, () => {
-  console.log("Server running up 3001");
+server.listen(3000, () => {
+  console.log("Server running up 3000");
 });
