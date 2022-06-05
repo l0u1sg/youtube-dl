@@ -11,7 +11,7 @@ const notify = (msg, { success }) => {
   return toast.error(msg);
 };
 
-const socket = io("http://localhost:3000/");
+const socket = io("/api");
 
 export default function Home() {
   const [videos, setVideos] = useState([]);
