@@ -12,7 +12,7 @@ export default function VideoDownloader(props) {
     const filename = event.target.title;
     console.log(filename);
     axios
-      .get("http://localhost:3000/api/downloads/" + videoId + "/downloadfile", {
+      .get("/api/api/downloads/" + videoId + "/downloadfile", {
         responseType: "blob",
       })
       .then((response) => {
@@ -23,7 +23,7 @@ export default function VideoDownloader(props) {
   const removeVideo = async (event) => {
     const videoId = event.target.title;
     axios
-      .delete("http://localhost:3000/api/downloads/" + videoId)
+      .delete("/api/api/downloads/" + videoId)
       .then((respsonse) => {
         window.location.reload();
       });

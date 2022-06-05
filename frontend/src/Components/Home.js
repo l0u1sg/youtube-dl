@@ -27,7 +27,7 @@ export default function Home() {
     });
 
     axios
-      .get("http://localhost:3000/api/downloads")
+      .get("/api/api/downloads")
       .then((res) => {
         setVideos(res.data);
       })
@@ -42,7 +42,7 @@ export default function Home() {
     const youtubeUrl = event.target.elements.youtubeUrl.value;
 
     axios
-      .post("http://localhost:3000/api/downloads", { youtubeUrl })
+      .post("/api/api/downloads", { youtubeUrl })
       .then((res) => {
         notify("Fetching video details...", { success: true });
       })
