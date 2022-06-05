@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  nginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "80:80"
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
+    environment:
+      - REDIS_HOST=value
+      - REDIS_PORT=value
+      - REDIS_PASSWORD=value
+      - YTDL_NO_UPDATE=false
+      - MONGO_DB=value
+  client:
+    stdin_open: true
+    build: 
+      dockerfile: Dockerfile
+      context: ./frontend
