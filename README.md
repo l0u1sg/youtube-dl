@@ -1,5 +1,5 @@
 # Youtube Downloader Project
-A simple project to download youtube videos from web interface made with React.
+A simple project to download youtube videos from web interface made with React. Inspired by the [Javascript in Plainenglish tutorial](https://javascript.plainenglish.io)
 
 ## Project structure
 The project is divided into 3 separate parts:
