@@ -14,5 +14,11 @@ The frontend is made with React. It is a simple web interface that allows the us
 
 ## Installation
 To start the project, you need to install Docker and Docker Compose on your computer.
+Edit the ``docker-compose.yml`` file and change the variable settings with your information. The required environments are : 
+- **REDIS_HOST**: The host of the Redis server.
+- **REDIS_PORT**: The port of the Redis server.
+- **REDIS_PASSWORD**: The password of the Redis server.
+- **MONGO_DB**: The host of the MongoDB server.
+
 Once installed, run the command ```docker-compose up --build``` to run the project or ``docker-compose up -d --build`` to run it in the background.
 Then you can open your browser on ``http://localhost:80`` to see the interface.
